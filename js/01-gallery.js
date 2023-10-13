@@ -14,8 +14,8 @@ makeMarkupGallery(galleryItems);
 
 galleryRef.addEventListener('click', (event) => {
     console.dir(event.target)
-    if (event.current.nodeName !== 'IMG') {
-        return
+    if (event.target.nodeName !== 'IMG') {
+        return;
     }
     const instance = basicLightbox.create(`
     <img src=${event.target.dataset.original} width="800" height="600">
